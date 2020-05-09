@@ -26,7 +26,7 @@ export default Vue.extend({
 <style  scoped>
 .logo {
   font-size: 36pt;
-  font-family: "Amatic SC";
+  font-family: "Amatic SC", cursive;
   color: #ff00ff;
   font-weight: 40;
 }
