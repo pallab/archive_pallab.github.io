@@ -10,13 +10,13 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "npm run generate; git subtree push --prefix dist origin master",
-    "pbuild" : " npm run build ; npm run start"
+    "pbuild": " npm run build ; npm run start"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
-    "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0"
+    "@nuxtjs/bulma": "^1.2.1",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0"

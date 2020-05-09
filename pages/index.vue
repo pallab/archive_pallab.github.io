@@ -1,41 +1,28 @@
 <template>
-<!-- <!doctype html> -->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Notes</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <section class="section">
+  <section class="section">
+    <div>
       <div>
-        <div>
-          <Nav />
-        </div>
-        <div>
-          <div class="body">
-            <div class="columns">
-              <div class="column">
-                <Menu />
-              </div>
-              <div class="column is-four-fifths">
-                <Highlight />
-                <Highlight />
-                <!-- <Highlight /> -->
-              </div>
+        <Nav />
+      </div>
+      <div>
+        <div class="body">
+          <div class="columns">
+            <div class="column">
+              <Menu />
             </div>
-            <!-- <div>
-              <Footer />
-            </div> -->
+            <div class="column is-four-fifths">
+              <Highlight />
+              <Highlight />
+              <!-- <Highlight /> -->
+            </div>
           </div>
+          <!-- <div>
+              <Footer />
+          </div>-->
         </div>
       </div>
-    </section>
-  </body>
-</html>
+    </div>
+  </section>
 </template>
 
 <script lang="ts">

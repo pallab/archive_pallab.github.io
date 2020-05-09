@@ -5,14 +5,19 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Notes',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'my notes' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap' }
+    ],
+    script: [
+      { src : 'https://use.fontawesome.com/releases/v5.3.1/js/all.js'}
+      // { src: 'https://use.fontawesome.com/releases/v5.3.1/js/all.js' }
     ]
   },
   /*
