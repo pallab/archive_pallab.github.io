@@ -11,8 +11,8 @@
               <Menu />
             </div>
             <div class="column is-four-fifths">
-              <Highlight />
-              <Highlight />
+              <Post />
+              <Post />
               <!-- <Highlight /> -->
             </div>
           </div>
@@ -27,14 +27,14 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Highlight from "./Highlight.vue";
-import Menu from "./Menu.vue";
+import Post from "~/components/Post/Post.vue";
+import Menu from "~/components/Menu/Menu.vue";
 import Nav from "./Nav.vue";
 import Footer from "./Footer.vue";
 
 export default Vue.extend({
   components: {
-    Highlight,
+    Post,
     Menu,
     Nav,
     Footer
