@@ -1,42 +1,57 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        pallabkalita.github.io
-      </h1>
-      <h2 class="subtitle">
-        My Notes
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+<!-- <!doctype html> -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div>
+        <div>
+          <Nav />
+        </div>
+        <div>
+          <div class="body">
+            <div class="columns">
+              <div class="column">
+                <Menu />
+              </div>
+              <div class="column is-four-fifths">
+                <Highlight />
+                <Highlight />
+                <!-- <Highlight /> -->
+              </div>
+            </div>
+            <div>
+              <Footer />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </body>
+</html>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
+import Vue from "vue";
+import Highlight from "./Highlight.vue";
+import Menu from "./Menu.vue";
+import Nav from "./Nav.vue";
+import Footer from "./Footer.vue";
 
 export default Vue.extend({
   components: {
-    Logo
+    Highlight,
+    Menu,
+    Nav,
+    Footer
   }
-})
+});
 </script>
 
 <style>
@@ -50,8 +65,8 @@ export default Vue.extend({
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -69,5 +84,11 @@ export default Vue.extend({
 
 .links {
   padding-top: 15px;
+}
+
+.body {
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 40px;
 }
 </style>
