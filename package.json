@@ -9,9 +9,9 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "npm run generate; git subtree push --prefix dist origin master",
     "pbuild": "npm run build ; npm run start",
-    "commit" : "git add .; git commit -m'wip'; git push"
+    "commit" : "git add .; git commit -m'wip'; git push",
+    "deploy": "npm run generate; npm run commit ;git subtree push --prefix dist origin master"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
