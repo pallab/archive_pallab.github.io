@@ -11,9 +11,8 @@
               <Menu />
             </div>
             <div class="column is-four-fifths">
-              <Post />
-              <Post />
-              <!-- <Highlight /> -->
+              <!-- <div v-for="post in posts" v-bind:key="post.id"> <p>{{post}} </p></div> -->
+              <Post v-for="post in posts" v-bind:key="post.id" v-bind:post="post"/>
             </div>
           </div>
           <!-- <div>
@@ -31,6 +30,7 @@ import Post from "~/components/Post/Post.vue";
 import Menu from "~/components/Menu/Menu.vue";
 import Nav from "./Nav.vue";
 import Footer from "./Footer.vue";
+import postsJson from "~/assets/data/articles.json"
 
 export default Vue.extend({
   components: {
@@ -38,7 +38,13 @@ export default Vue.extend({
     Menu,
     Nav,
     Footer
-  }
+  },
+
+  data() {
+    return {
+      posts : postsJson
+    };
+  },
 });
 </script>
 

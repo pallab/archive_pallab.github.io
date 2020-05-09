@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+        "title" : "Article XyZ",
+        "body" : "Lorem ipsum details",
+        "summary" : "Lorem summary",
+        "date" : "2020-01-05"
+    },
+    {
+        "id" : 2,
+        "title" : "Article Abc",
+        "body" : "Lorem ipsum details",
+        "summary" : "Lorem summary",
+        "date" : "2020-01-06"
+    },
+    {
+        "id" : 3,
+        "title" : "Article Mnp",
+        "body" : "Lorem ipsum details",
+        "summary" : "Lorem summary",
+        "date" : "2020-01-07"
+    }
+]
