@@ -1,8 +1,8 @@
 import postsJson from "./assets/data/articles.json";
 
 export default {
-  mode: 'spa',
-  // mode: 'universal',
+  // mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
