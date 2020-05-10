@@ -1,3 +1,4 @@
+import postsJson from "./assets/data/articles.json";
 
 export default {
   mode: 'universal',
@@ -71,6 +72,15 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+
+  generate: {
+    subFolders: false,
+    routes () {
+      return postsJson.map((post) => {
+            return 'post/' + post.id
+          })
     }
   }
 }

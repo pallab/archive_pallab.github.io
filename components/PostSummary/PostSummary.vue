@@ -1,4 +1,6 @@
 <template>
+  <nuxt-link :to="`post/${post.id}`">
+
     <div @mouseover="isHovering = true" 
       @mouseout="isHovering = false" 
       :class="{card: isHovering}"
@@ -9,6 +11,7 @@
           <span class="is-small"> {{ post.date }}</span>
       </div>
   </div>
+  </nuxt-link>
 </template>
 
 <script lang="ts">
@@ -49,6 +52,6 @@ export default Vue.extend({
 <style scoped>
 .content-mergin{
   margin-bottom: 12px;
-  padding: 4px;
+  padding: 8px;
 }
 </style>
