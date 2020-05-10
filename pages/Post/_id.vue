@@ -21,12 +21,6 @@ interface Post {
 export default Vue.extend({
   name: "Post",
 
-  // data() {
-  //   return {
-  //     id: this.$route.params.id
-  //   };
-  // },
-
   computed: {
     post() {
       const id = parseInt(this.$route.params.id);

@@ -7,7 +7,7 @@
       > 
       <div class="content content-mergin">
           <h3 class="is-medium"> {{ fullName }}</h3>
-          <p > {{ post.summary }}</p>
+          <p > {{ post.summary || post.body.split(' ').slice(0, 50).join(' ') }}...</p>
           <span class="is-small"> {{ post.date }}</span>
       </div>
   </div>
@@ -46,6 +46,7 @@ export default Vue.extend({
       return `${this.post.title}`;
     }
   }
+
 });
 </script>
 
