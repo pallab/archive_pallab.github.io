@@ -7,7 +7,8 @@
       > 
       <div class="content content-mergin">
           <h3 class="is-medium"> {{ fullName }}</h3>
-          <p > {{ post.summary || post.body.split(' ').slice(0, 50).join(' ') }}...</p>
+          <!-- <p > {{ post.summary || post.body.split(' ').slice(0, 50).join(' ') }}...</p> -->
+          <p > {{ post.summary }}...</p>
           <span class="is-small"> {{ post.date }}</span>
       </div>
   </div>
@@ -20,7 +21,6 @@ import Vue, { PropOptions } from "vue";
 interface Post {
   id: number;
   title: string;
-  body: string;
   summary: string;
   date : string;
 }

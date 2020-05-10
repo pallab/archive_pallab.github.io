@@ -3,32 +3,35 @@
     <h1 class="post-item">{{ post.title }}</h1>
     <h6 class="post-item">{{ post.date }}</h6>
     <div class="post-item">
-        <span v-html="post.body"></span>
+      <span v-html="postBody"></span>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue, { PropOptions } from "vue";
 import postsJson from "~/assets/data/articles.json";
-
-interface Post {
-  id: number;
-  title: string;
-  body: string;
-  summary: string;
-  date: string;
-}
+import axios from "@nuxtjs/axios";
 
 export default Vue.extend({
   name: "Post",
+
+  data() {
+    return {
+    };
+  },
+
+  async asyncData ({ $axios , params}) {
+    let data = await $axios.$get(`/posts/${params.id}.html`);
+    return { postBody: data }
+  },
 
   computed: {
     post() {
       const id = parseInt(this.$route.params.id);
       return postsJson.find(post => post.id === id);
     }
-  }
+  },
 });
 </script>
 
