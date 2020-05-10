@@ -2,22 +2,16 @@
   <section class="section">
     <div>
       <div>
-        <Nav />
-      </div>
-      <div>
-        <div class="body">
+        <div class="bodyc">
           <div class="columns">
             <div class="column">
+              <Nav />
               <Menu />
             </div>
             <div class="column is-four-fifths">
-              <!-- <div v-for="post in posts" v-bind:key="post.id"> <p>{{post}} </p></div> -->
-              <Post v-for="post in posts" v-bind:key="post.id" v-bind:post="post"/>
+              <PostSummary v-for="post in posts" v-bind:key="post.id" v-bind:post="post"/>
             </div>
           </div>
-          <!-- <div>
-              <Footer />
-          </div>-->
         </div>
       </div>
     </div>
@@ -26,15 +20,15 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Post from "~/components/Post/Post.vue";
+import PostSummary from "~/components/Post/PostSummary.vue";
 import Menu from "~/components/Menu/Menu.vue";
 import Nav from "./Nav.vue";
 import Footer from "./Footer.vue";
-import postsJson from "~/assets/data/articles.json"
+import postsJson from "~/assets/data/articles.json";
 
 export default Vue.extend({
   components: {
-    Post,
+    PostSummary,
     Menu,
     Nav,
     Footer
@@ -80,7 +74,7 @@ export default Vue.extend({
   padding-top: 15px;
 }
 
-.body {
+.bodyc {
   margin-left: 10rem;
   margin-right: 10rem;
   margin-top: 40px;

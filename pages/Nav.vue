@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nav class="level">
-      <p class="level-item has-text-centered">
+    <!-- <nav class="level">
+      <p class="level-item has-text-centered"> -->
         <span class="logo">Notes</span>
-      </p>
-    </nav>
+      <!-- </p>
+    </nav> -->
     <!-- <nav class="level">
       <p class="level-item has-text-centered">
         <a class="link is-info">Home</a>
