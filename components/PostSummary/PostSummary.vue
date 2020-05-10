@@ -1,8 +1,13 @@
 <template>
-    <div class="content">
-      <h3 class="is-medium"> {{ fullName }}</h3>
-      <p > {{ post.summary }}</p>
-      <span class="is-small"> {{ post.date }}</span>
+    <div @mouseover="isHovering = true" 
+      @mouseout="isHovering = false" 
+      :class="{card: isHovering}"
+      > 
+      <div class="content content-mergin">
+          <h3 class="is-medium"> {{ fullName }}</h3>
+          <p > {{ post.summary }}</p>
+          <span class="is-small"> {{ post.date }}</span>
+      </div>
   </div>
 </template>
 
@@ -29,7 +34,7 @@ export default Vue.extend({
 
   data() {
     return {
-      message: "This is a message"
+      isHovering: false
     };
   },
 
@@ -41,4 +46,9 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="stylus" scoped></style>
+<style scoped>
+.content-mergin{
+  margin-bottom: 12px;
+  padding: 4px;
+}
+</style>

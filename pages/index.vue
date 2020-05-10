@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import PostSummary from "~/components/Post/PostSummary.vue";
+import PostSummary from "~/components/PostSummary/PostSummary.vue";
 import Menu from "~/components/Menu/Menu.vue";
 import Nav from "./Nav.vue";
 import Footer from "./Footer.vue";
