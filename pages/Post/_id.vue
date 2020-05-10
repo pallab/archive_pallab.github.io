@@ -22,7 +22,7 @@ export default Vue.extend({
   },
 
   async asyncData ({ $axios , params}) {
-    let data = await $axios.$get(`/articles/${params.id}.json`);
+    let data = await $axios.$get(`/articles/${params.id}.html`);
     return { postBody: data }
   },
 
