@@ -2,7 +2,9 @@
   <div class="content post">
     <h1 class="post-item">{{ post.title }}</h1>
     <h6 class="post-item">{{ post.date }}</h6>
-    <p class="post-item">{{ post.body }}</p>
+    <div class="post-item">
+        <span v-html="post.body"></span>
+    </div>
   </div>
 </template>
 
