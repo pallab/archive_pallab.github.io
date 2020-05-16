@@ -1,18 +1,31 @@
 <template>
-  <div>
-    <!-- <nav class="level">
-      <p class="level-item has-text-centered"> -->
-        <span class="logo">Notes</span>
-      <!-- </p>
-    </nav> -->
-    <!-- <nav class="level">
-      <p class="level-item has-text-centered">
-        <a class="link is-info">Home</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a class="link is-info">Menu</a>
-      </p>
-    </nav> -->
+  <div class="columns">
+    <div class="column">
+      <div class="level">
+        <p class="level-item">
+          <span class="logo">Notes</span>
+        </p>
+      </div>
+    </div>
+    <div class="column is-four-fifths">
+      <div class="level">
+        <p class="level-item">
+          <strong>All</strong>
+        </p>
+        <p class="level-item">
+          <a>Published</a>
+        </p>
+        <p class="level-item">
+          <a>Drafts</a>
+        </p>
+        <p class="level-item">
+          <a>Deleted</a>
+        </p>
+        <p class="level-item">
+          <a class="button is-success">New</a>
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,5 +42,8 @@ export default Vue.extend({
   font-family: "Amatic SC", cursive;
   color: #ff00ff;
   font-weight: 40;
+  align-self: center;
+  align-items: center;
+  align-content: center;
 }
 </style>

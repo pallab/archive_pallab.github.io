@@ -50,7 +50,8 @@ export default {
     '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
+    // "@nuxtjs/pwa": "^3.0.0-0",
   ],
   /*
   ** Axios module configuration

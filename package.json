@@ -10,13 +10,12 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "pbuild": "npm run build ; npm run start",
-    "commit" : "git add .; git commit -m'wip'; git push",
+    "commit": "git add .; git commit -m'wip'; git push",
     "deploy": "export API_URL=pallabkalita.github.io; npm run generate; npm run commit ;git subtree push --prefix dist origin master"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/bulma": "^1.2.1",
-    "@nuxtjs/pwa": "^3.0.0-0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
