@@ -1,5 +1,5 @@
 <template>
-  <div class="content post">
+  <div class="container is-fullhd content post">
     <h1 class="post-item">{{ post.title }}</h1>
     <h6 class="post-item">{{ post.date }}</h6>
     <div class="post-item">
@@ -17,13 +17,12 @@ export default Vue.extend({
   name: "Post",
 
   data() {
-    return {
-    };
+    return {};
   },
 
-  async asyncData ({ $axios , params}) {
+  async asyncData({ $axios, params }) {
     let data = await $axios.$get(`/articles/${params.id}.html`);
-    return { postBody: data }
+    return { postBody: data };
   },
 
   computed: {
@@ -31,7 +30,7 @@ export default Vue.extend({
       const id = parseInt(this.$route.params.id);
       return postsJson.find(post => post.id === id);
     }
-  },
+  }
 });
 </script>
 
@@ -45,17 +44,20 @@ export default Vue.extend({
 }
 
 .post-item {
-  max-width: 1200px;
   text-align: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  /* padding-left: 30px;
+  padding-right: 30px; */
 }
 
-.post>h1 {
+.post > h1 {
   color: turquoise;
 }
 
-.post>h6 {
+.post > h6 {
   color: yellowgreen;
+}
+
+.post > div {
+  margin-top: 50px;
 }
 </style>
