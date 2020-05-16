@@ -50,4 +50,12 @@ export default Vue.extend({
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.post>h1 {
+  color: turquoise;
+}
+
+.post>h6 {
+  color: yellowgreen;
+}
 </style>

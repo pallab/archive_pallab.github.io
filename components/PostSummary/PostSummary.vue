@@ -1,18 +1,17 @@
 <template>
-  <nuxt-link :to="`post/${post.id}`">
+  <div @mouseover="isHovering = true" @mouseout="isHovering = false" :class="{card: isHovering}">
+    <div class="content content-mergin">
 
-    <div @mouseover="isHovering = true" 
-      @mouseout="isHovering = false" 
-      :class="{card: isHovering}"
-      > 
-      <div class="content content-mergin">
-          <h3 class="is-medium"> {{ fullName }}</h3>
-          <!-- <p > {{ post.summary || post.body.split(' ').slice(0, 50).join(' ') }}...</p> -->
-          <p > {{ post.summary }}...</p>
-          <span class="is-small"> {{ post.date }}</span>
-      </div>
+      <nuxt-link :to="`post/${post.id}`">
+        <h3 class="is-medium lcas">{{ fullName }}</h3>
+      </nuxt-link>
+
+      <p>{{ post.summary }}...</p>
+
+      <span class="is-small">{{ post.date }}</span>
+
+    </div>
   </div>
-  </nuxt-link>
 </template>
 
 <script lang="ts">
@@ -22,7 +21,7 @@ interface Post {
   id: number;
   title: string;
   summary: string;
-  date : string;
+  date: string;
 }
 
 export default Vue.extend({
@@ -46,13 +45,15 @@ export default Vue.extend({
       return `${this.post.title}`;
     }
   }
-
 });
 </script>
 
 <style scoped>
-.content-mergin{
+.content-mergin {
   margin-bottom: 12px;
   padding: 8px;
+}
+.content-mergin h3 {
+  color: turquoise;
 }
 </style>
