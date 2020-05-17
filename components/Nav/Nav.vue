@@ -10,20 +10,14 @@
     <div class="column is-four-fifths">
       <div class="level">
         <p class="level-item">
-          <nuxt-link :to="`/`">
-            <a>Home</a>
-          </nuxt-link>
+          <nuxt-link :to="`/`">Home</nuxt-link>
         </p>
         <p class="level-item">
-          <nuxt-link :to="`about`">
-            <a>About</a>
-          </nuxt-link>
+          <nuxt-link :to="`about`">About</nuxt-link>
         </p>
 
         <p class="level-item">
-          <nuxt-link :to="`blogs`">
-            <a>Blogs</a>
-          </nuxt-link>
+          <nuxt-link :to="`blogs`">Blogs</nuxt-link>
         </p>
 
         <p class="level-item">
