@@ -1,19 +1,23 @@
 <template>
-  <div class="columns">
-    <div class="column">
+  <!-- <div class="columns"> -->
+    <!-- <div class="column">
       <div class="level">
         <p class="level-item">
           <span class="logo">Notes</span>
         </p>
       </div>
-    </div>
-    <div class="column is-four-fifths">
+    </div> -->
+    <!-- <div class="column is-four-fifths"> -->
       <div class="level">
         <p class="level-item">
           <nuxt-link :to="`/`">Home</nuxt-link>
         </p>
         <p class="level-item">
           <nuxt-link :to="`about`">About</nuxt-link>
+        </p>
+
+        <p class="level-item">
+          <span class="logo">Notes</span>
         </p>
 
         <p class="level-item">
@@ -24,8 +28,8 @@
           <a>Lists</a>
         </p>
       </div>
-    </div>
-  </div>
+    <!-- </div>
+  </div> -->
 </template>
 
 <script lang="ts">
