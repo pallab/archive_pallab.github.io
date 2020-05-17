@@ -1,63 +1,48 @@
 <template>
-  <div class="container is-fullhd content post">
-    <h1 class="post-item">{{ post.title }}</h1>
-    <h6 class="post-item">{{ post.date }}</h6>
-    <div class="post-item">
-      <span v-html="postBody"></span>
-    </div>
-  </div>
+  <PostTemplate>
+    <template #title>{{ post.title }}</template>
+    <template #date>{{ post.date }}</template>
+    <component :is="component" :key="post.id" />
+  </PostTemplate>
 </template>
 
+ 
 <script>
 import Vue, { PropOptions } from "vue";
 import postsJson from "~/assets/data/articles.json";
-import axios from "@nuxtjs/axios";
+import PostTemplate from "~/components/PostTemplate/PostTemplate.vue";
 
 export default Vue.extend({
   name: "Post",
 
-  data() {
-    return {};
+  components: {
+    PostTemplate
   },
 
-  async asyncData({ $axios, params }) {
-    let data = await $axios.$get(`/articles/${params.id}.html`);
-    return { postBody: data };
+  data() {
+    return {
+      component: null
+    };
   },
 
   computed: {
     post() {
       const id = parseInt(this.$route.params.id);
       return postsJson.find(post => post.id === id);
+    },
+    loader() {
+      return () => import(`~/content/Post${this.$route.params.id}`);
     }
+  },
+
+  mounted() {
+    this.loader()
+      .then(() => {
+        this.component = () => this.loader();
+      })
+      .catch(() => {
+        this.component = () => import("~/content/Post1.vue");
+      });
   }
 });
 </script>
-
-<style scoped>
-.post {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.post-item {
-  text-align: center;
-  /* padding-left: 30px;
-  padding-right: 30px; */
-}
-
-.post > h1 {
-  color: turquoise;
-}
-
-.post > h6 {
-  color: yellowgreen;
-}
-
-.post > div {
-  margin-top: 50px;
-}
-</style>
