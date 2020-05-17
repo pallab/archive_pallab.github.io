@@ -1,0 +1,10 @@
+[
+    {
+        "name" : "Blog",
+        "id" : "blog"
+    },
+    {
+        "name" : "Lists",
+        "id" : "list"
+    }
+]

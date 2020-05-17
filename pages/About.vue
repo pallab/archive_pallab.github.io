@@ -1,6 +1,6 @@
 <template>
   <PageTemplate>
-    <p> Home Page ....</p>
+    <p> About Page ....</p>
   </PageTemplate>
 </template>
 
@@ -14,3 +14,4 @@ export default Vue.extend({
   }
 });
 </script>
+

@@ -10,19 +10,24 @@
     <div class="column is-four-fifths">
       <div class="level">
         <p class="level-item">
-          <strong>All</strong>
+          <nuxt-link :to="`/`">
+            <a>Home</a>
+          </nuxt-link>
         </p>
         <p class="level-item">
-          <a>Published</a>
+          <nuxt-link :to="`about`">
+            <a>About</a>
+          </nuxt-link>
         </p>
+
         <p class="level-item">
-          <a>Drafts</a>
+          <nuxt-link :to="`blogs`">
+            <a>Blogs</a>
+          </nuxt-link>
         </p>
+
         <p class="level-item">
-          <a>Deleted</a>
-        </p>
-        <p class="level-item">
-          <a class="button is-success">New</a>
+          <a>Lists</a>
         </p>
       </div>
     </div>
@@ -30,7 +35,7 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { PropOptions } from "vue";
 export default Vue.extend({
   name: "Nav"
 });

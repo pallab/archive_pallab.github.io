@@ -1,9 +1,11 @@
 <template>
-  <PostTemplate>
-    <template #title>{{ post.title }}</template>
-    <template #date>{{ post.date }}</template>
-    <component :is="component" :key="post.id" />
-  </PostTemplate>
+  <PageTemplate>
+    <PostTemplate>
+      <template #title>{{ post.title }}</template>
+      <template #date>{{ post.date }}</template>
+      <component :is="component" :key="post.id" />
+    </PostTemplate>
+  </PageTemplate>
 </template>
 
  
@@ -11,12 +13,13 @@
 import Vue, { PropOptions } from "vue";
 import postsJson from "~/assets/data/articles.json";
 import PostTemplate from "~/components/PostTemplate/PostTemplate.vue";
+import PageTemplate from "~/components/PageTemplate/PageTemplate.vue";
 
 export default Vue.extend({
   name: "Post",
 
   components: {
-    PostTemplate
+    PageTemplate, PostTemplate
   },
 
   data() {
@@ -31,7 +34,7 @@ export default Vue.extend({
       return postsJson.find(post => post.id === id);
     },
     loader() {
-      return () => import(`~/content/Post${this.$route.params.id}`);
+      return () => import(`~/content/${this.$route.params.id}`);
     }
   },
 
@@ -41,7 +44,7 @@ export default Vue.extend({
         this.component = () => this.loader();
       })
       .catch(() => {
-        this.component = () => import("~/content/Post1.vue");
+        this.component = () => import("~/content/1.vue");
       });
   }
 });
